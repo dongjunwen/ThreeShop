@@ -1,0 +1,241 @@
+@charset "utf-8";
+/*隐藏手机头部*/
+.phone_top{display: none;}
+
+/*隐藏pad的头部*/
+.pad_top{display: none;}
+/*隐藏手机端banner*/
+.focus{display: none;}
+
+/*隐藏手机小图*/
+.phone_icon{display: none;}
+/*隐藏pad端的更多More*/
+.pad_more{display: none;}
+
+/*************************************pc的头部***********************************************/
+.header{background: #fff}
+.nav-header{width: 100%;border: 0px solid #F00;height: 30px;background: #EFEFEF;min-width: 1210px;}
+.head_min{width: 1210px;  margin: 0 auto;height: 30px}
+.hd_lf{font-size: 12px;color: #999;display: block;;height: 30px;line-height: 30px}
+.hd_lf a{color: #999;text-decoration: none;}
+.hd_lf a:hover{color: #000;}
+.head_center{width: 1210px;margin: 0 auto;border: 0px solid #f00;}
+.logo{padding-top: 25px;margin-left: 5px}
+
+/*搜索样式*/
+.search{width:500px;border: 0px solid #f00;margin-left: 180px}
+.search-form{width:500px;margin:0px auto;overflow: hidden;padding-top: 20px}
+.search-form .search-bd{height: 25px;}
+.search-form .search-bd li{font-size:12px;width:60px;height: 25px;line-height: 25px;text-align:center;float: left;cursor: pointer;background-color: #eee;color: #666;}
+.search-form .search-bd li.selected{color: #fff;font-weight: 700;background-color: #FFD101;}
+.search-form .search-hd{height:34px;background-color: #FFD101;padding: 3px;position: relative;}
+.search-form .search-hd .search-input{width: 420px;height: 22px;line-height: 22px;padding: 6px 0;background: none;text-indent: 10px;border: 0;outline: none;position: relative;left: 3px;top: 0;z-index: 5;#margin-left:-10px;}
+.search-form .search-hd .btn-search{width: 70px;height: 34px;line-height:34px;position: absolute;right: 3px;top: 3px;border: 0;z-index: 6;cursor: pointer;font-size: 14px;color: #000;background: none;outline: none;}
+.search-form .search-hd .pholder{display: inline-block;padding: 2px 0;font-size: 12px;color: #999;position: absolute;left: 13px;top: 11px;z-index: 4;padding-left:7px;#top:11px;}
+.search-form .search-hd .s2,.search-form .search-hd #s2{display: none;}
+.search-form .search-bg{width: 420px;height: 34px;background-color: #fff;position: absolute;left: 3px;top: 3px;z-index: 1;}
+
+
+.xian{margin-left: 70px;padding-top: 15px}
+.welcom{padding-top: 30px;margin-left: 30px}
+.welcom dt{font-size: 16px;color: #666;}
+.welcom dd{font-size: 12px;color: #666}
+.erweima{margin-top: 20px}
+
+/******************************************头部导航样式************************************/
+.navwrap{background:#333333;min-width: 1210px}
+#nav{height:40px;width:1210px;margin:0 auto;position:relative;padding:0;z-index:99}
+.navbar{height:40px;padding-left:210px;position:relative}
+.navbar a{float:left;width:auto;text-align:center;height:36px;line-height:40px;color:#fff;padding:0 25px;text-decoration:none;font-size:15px;font-family:"\5FAE\8F6F\96C5\9ED1";white-space:nowrap;position:relative}
+
+.navbar a:hover{color:#fff;border-bottom: 4px solid #FFD101}
+
+
+.pros{position:absolute;top:0px;left:0;z-index:1000;width:180px;background-color:#FFD101}
+.pros h2{width:170px;height:40px;line-height:40px;color:#fff;padding-left:10px;font-size:16px;font-weight:400;font-family:"\5FAE\8F6F\96C5\9ED1"}
+.subpage h2{cursor:pointer}
+.subpage .prosul{display:none}
+.prosul{width:180px;margin-top:2px;_overflow:hidden;height:390px}
+.prosul li{line-height:35px;height:35px;_overflow:hidden;border-bottom:1px #666 dotted;margin-right:3px;padding-left:10px;font-size: 13px;}
+.prosul li.prosahover{background-color:#FFDF6B;margin-right:0;padding-right:3px;}
+.prosul a{color:#333;padding-right:8px;_padding-right:6px;white-space:nowrap;display:inline-block;height:35px}
+
+.prosul li.prosahover a{color:#000}
+.prosul li.prosahover a.ti{color:#d03322}
+.prosul li a:hover{color:#d03322}
+.prosul li.nochild a:hover{color:#fff}
+.prosul li i{float:right;display:block;width:20px;height:35px;background-position:0 -276px;padding-right:12px}
+.prosul li.prosahover i{background-position:0 -326px}
+.prosul li.last{border-bottom:0 none}
+.prosul li.hotareas{background-image:none;padding-left:12px;line-height:26px;height:136px;*overflow:hidden; border: 1px solid #A78300;width: 150px;margin:10px auto;}
+.prosul li.hotareas i{line-height:30px;margin-top:-2px;height:40px;background-position:0 -279px}
+.prosul li.hotareas a{line-height:30px;height:30px}
+.prosul li.hotareas a.hot{background-position:right 0}
+.prosul li h2{padding-left:0;line-height:40px;display:inline;font-size:14px;font-weight:400;}
+.prosul li.prosahover h2{color:#d03322}
+.prosmore{position:absolute;z-index:999;left:180px;top:40px;background-color:#fff;border:0px #d03322 solid;border-left:0 none;width:412px;height:393px;opacity: 0.7}
+.prosul .prosmore{text-align:left}
+.prosul .prosmore span{float:left;height:36px;width:107px;line-height:22px}
+.prosul li .prosmore a{height:18px;line-height:18px;padding:0 4px}
+.prosul li .prosmore a:hover{background-color:#d03322;color:#fff}
+.hotareas h3{border-bottom: 1px #666 dotted;margin-left: -10px;padding-left: 20px;background: url(../image/005.png) no-repeat 5px 7px;}
+.hotareas p{height: 20px;border: 0px solid #f00;margin:0px}
+
+/********************************banner样式***************************************/
+/*banner_整体*/
+.banner_con{height: 370px;width: 100%;border:0px solid #f00;min-width: 1210px;}
+/*轮换大区域*/
+.lunhuan{width:100%;height:390px;position:relative;}
+.lunhuan #lunhuanback{width:100%;height:392px;position:absolute;left:0px;top:0px;overflow:hidden;}
+.lunhuan #lunhuanback p{width:100%;height:392px;position:absolute;left:0px;top:0px;opacity:0;filter:alpha(opacity=0);background-repeat:no-repeat;background-position:50% 0px;}
+.lunhuan .lunhuan_main{width:1190px;height:392px;margin:0 auto;position:relative;}
+
+.lunhuancenter .centergif{display:block;width:760px;height:420px;position:absolute;left:0px;top:0px;z-index:4;}
+.lunhuancenter b{position:absolute;left:0px;top:-40px;opacity:0;filter:alpha(opacity=0);z-index:3;width:760px;}
+#lunbonum{height:14px;line-height:23px;position:absolute;left:500px;top:330px;z-index:5;}
+#lunbonum li{width:14px;height:14px;float:left;margin-right:9px;background:#B4B4B4;border-radius:14px;cursor:pointer;}
+#lunbonum .lunboone{background:#FFD101;cursor:pointer;}
+#lunhuanback img{width: 1210px;margin: 0 auto;display: block;height: 399px;}
+.bg_1{background: #E9E8E5}
+.bg_2{background: #AE162B}
+.bg_3{background: #FFE048}
+.bg_4{background: #EAE9E6}
+
+
+/**************************************右侧登录*************************************/
+.right_longing{width: 200px;height: 370px;background: #000;opacity:0.5; filter:alpha(opacity=0); position: absolute;right: 0px;z-index: 1;zoom:1;top: 50px;  -webkit-box-shadow: 0 0 15px #000;-moz-box-shadow: 0 0 15px #000;}
+.login{position: relative; }
+.login_min{width: 170px;position: absolute;top: 50px; right:0;z-index: 10000;zoom:1;border: 0px solid #f00;padding: 15px;}
+.login_top{width: 170px;border: 0px solid #f00;}
+.login_top dt{width: 60px;height: 60px;border: 0px solid #f00;float: left;}
+.login_top dt img{border-radius: 50%;width: 60px;height: auto;}
+.login_top dd{float: left;width: 100px;overflow: hidden;margin-left: 10px;color: #fff;}
+.big_nanme{font-size: 16px;}
+.tlsy{font-size: 13px;height: 30px;line-height: 30px}
+.mfzc{font-size: 14px;color: #fff;border-bottom:2px solid #fff;text-decoration: none;}
+
+.login_info{border-top: 1px dashed #333;border-bottom: 1px dashed #333;margin-top: 15px}
+.info_min{width: 50px;float: left;margin-right: 6px;padding-top: 5px;padding-bottom: 5px;border: 0px solid #f00}
+.info_min dt{height: 15px; text-align: center;}
+.info_min dd{height: 25px;font-size: 13px;text-align: center;line-height: 25px}
+.info_min a{color: #fff;text-decoration: none;}
+.info_min a:hover{color: #FFD101}
+.login_propaganda{width: 170px;height: 49px;padding-top: 20px}
+.see_more{margin-top: 20px}
+.see_more a{color: #fff;font-size: 12px;display: block;text-decoration: none;width: 170px;text-align: center;}
+.see_more a:hover{color: #FFD101}
+.but_con{margin-top: 10px}
+.but_1{width: 70px;display: block;height: 25px;line-height: 25px;border: 2px #FFD101 solid;border-radius: 15px;font-size: 14px;text-align: center;color: #fff;text-decoration: none;}
+.tq_list{width: 100%;border: 0px solid #f00}
+.tq_list li{float: left;width: 55px;padding-left: 25px;margin-top: 10px;margin-right: 5px}
+.tq_list li a:hover{color: #FFD101}
+.tq_list li a{color: #fff;font-size: 13px;display: block;}
+.log_hysj{background: url(../image/sic_02.png) no-repeat;}
+.log_hysj2{background: url(../image/sic_03.png) no-repeat;}
+.log_hysj3{background: url(../image/sic_04.png) no-repeat;}
+.log_hysj4{background: url(../image/sic_05.png) no-repeat;}
+
+/********************首页选项卡样式********************************/
+#outer {width:1210px;margin:0px auto; margin-top: 60px}
+#tab {overflow:hidden;zoom:1;background:#fff;width:1208px;}
+#tab li {background: #DFDFDF;font-weight: bold; border-left:2px solid #EFEFEF;border-right:2px solid #EFEFEF; border-bottom:3px solid #5E5E5E; border-top:px solid #5E5E5E;float:left;color:#000;height:30px;cursor:pointer;line-height:30px;list-style-type:none;width:600px;font-size: 13px;text-align: center;font-weight: bold;}
+#tab li.current {background: #fff;color:#000;border-top: 3px solid #FFD101;height: 31px;border-bottom: 0px;font-size: 16px;}
+#content {border-left:2px solid #EFEFEF;border-right:2px solid #EFEFEF;border-bottom:2px solid #EFEFEF;border-top-width:0;margin-top: 0px;width: 1204px;}
+#content ul {line-height:25px;display:none;padding:20px 30px;background: #fff}
+.xk_left{width: 450px;border: 0px solid #f00;}
+.xk_right{width: 670px;border: 0px solid #f00;}
+.xk_min{width: 130px;border:0px solid #f00;float: left;margin-left: 20px}
+.xk_min dd{height: 20px;line-height: 20px;}
+.xk_one{font-size: 13px;}
+.xk_two{font-size: 10px;margin-bottom: 20px}
+.xk_tit{font-size: 13px;height: 30px;line-height: 30px;margin-top: 20px}
+.xk_con{font-size: 12px;color: #000}
+
+/************************人气单品的样式*******************************************/
+.pc_contenter{width: 1210px;border: 0px solid #f00;margin: 0 auto}
+.pc_contenter h3{width: 100%;margin:40px auto;font-size: 20px;color: #333;position: relative;}
+.pc_contenter h3 span{width: 350px;border: 2px solid #000;text-align: center;height: 50px;line-height: 50px;display: block;margin: 0 auto}
+.pc_contenter h3 strong{position: absolute;right: 0;top: 18px}
+.lf_min{width: 336px;border: 0px solid #f00;overflow: hidden;float: left;}
+.rt_min{width: 872px;border: 0px solid #f00;float: right;}
+.goods_list{width: 208px;border: 0px solid #f00;height: 235px;background: #fff;
+    transition: all .2s linear;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: initial;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.goods_list dt{width: 208px;height: 150px;text-align: center;}
+.goods_list dt img{max-width: 180px; max-height: 150px;}
+.goods_list .goods_tit{text-align: left;font-size: 13px;margin-top: 5px;height: 40px;border: 0px solid #f00;padding-right: 6px;padding-left: 6px;}
+.goods_list .goods_tl{text-align: center;font-size: 13px;margin-top: 5px;height: 40px;border: 0px solid #f00height: 20px}
+
+.hov_bg{box-shadow: 0 15px 30px #999;
+	transform:translate3d(0,-2px,0);
+	transition: all .2s linear;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: initial;
+    color: #F47317;
+
+	  }
+
+/*************************************品牌开始********************************************/
+.brand_contenter{width: 1210px; margin: 0 auto;border: 0px solid #f00}
+.brand_list{}
+.brand_list li{width: 145px;height: 145px;margin-right: 6px;background: #fff;float: left;overflow: hidden;}
+.brand_list li img{width: 100%;height: auto;}
+.spbq{width: 145px;height: 145px;float: left;line-height: 2;position: relative;overflow: hidden;}
+.biankuang{width: 3px;height: 3px;position: absolute;z-index: 99;border-radius:10px;/*background: black;*/}
+.biankuang_1{height: 1px;top: -1px;left:0px;border-left: 3px solid #333;}
+.biankuang_2 {width: 0px;bottom:-3px;left: 0px;border-top: 3px solid #333;}
+.biankuang_3{ height: 0px;bottom:0px;right:0px;border-right: 3px solid #333;}
+.biankuang_4{width:0px;top:-3px;right:0px;border-bottom: 3px solid #333;}
+/*************************************猜你喜欢模块开始**************************************************/
+.lick_contenter{border: 0px solid #f00}
+.lf_lick{width: 714px;border: 0px solid #f00}
+.lf_lick h3{font-size: 16px;}
+.lick_con li{width: 174px;float: left;height: 230px;background: #fff;margin-right: 4px}
+.lick_con li img{width: 100%;height: auto;}
+.rt_evaluat{width: 480px;border: 0px solid #f00;position: relative;}
+.rt_evaluat h3{font-size: 16px;}
+.eva_cont{margin-top: 15px;}
+.eva_cont input[type="radio"] {margin: 3px 3px 0px 5px;display: none;}
+.eva_cont label {padding-left: 20px;cursor: pointer;background: url(../image/rido1.png) no-repeat;padding-right: 20px;}
+.eva_cont label.checked {background: url(../image/rido2.png) no-repeat;}
+
+.eva_conto{margin-top: 15px;}
+.eva_conto input[type="radio"] {margin: 3px 3px 0px 5px;display: none;}
+.eva_conto label {padding-left: 20px;cursor: pointer;background: url(../image/rido1.png) no-repeat;padding-right: 20px;}
+.eva_conto label.checked {background: url(../image/rido2.png) no-repeat;}
+.suggest{width: 458px;height: 30px;border: 1px solid #808080;padding: 10px;resize: none;margin-top: 15px}
+.sugg_bt{display: block;background: #333;color: #fff;width: 80px;height: 30px;text-align: center;line-height: 30px;position: absolute;right: 0px;bottom:-24px}
+.sugg_bt:hover{background: #FFA200;color: #333}
+/**************************************7天退换货地方**********************************/
+.biaozhi{width: 100%;text-align: center;margin-top: 40px;margin-bottom: 40px}
+.bottom_conter{width: 100%;border: 0px solid #f00;}
+.bottom_xzcon{width: 100%;background: #FFD600}
+.bottom_min{width: 1210px;margin: 0 auto;padding-top: 40px;padding-bottom: 40px}
+.lf_bottom{width: 352px; border: 0px solid #000}
+.help_tit{font-size: 16px;color: #333;font-weight: 500;text-align: center;}
+.phone{font-size: 22px;color: #000;text-align: center;}
+.rf_bottom{width: 852px;border: 0px solid #000;border-left: 1px solid #000}
+.rigt_min{width: 120px;border: 0px solid #f00;float: left;margin-left: 45px}
+.rigt_min h3{font-size: 16px;color: #333;font-family: ''microsoft yahei',Tahoma,Arial,Simsun,Sans-serif';margin-bottom: 10px;font-weight: 600}
+.rigt_min li{font-weight: 400;color: #333;height: 35px;line-height: 35px;}
+
+/****************************版权信息*************************************/
+.copy{width: 100%;padding-top: 40px;padding-bottom: 40px;background: #383838}
+.copy p{width: 100%;height: 30px;line-height: 30px;color: #FFD600;text-align: center;}
+
+
+
+
+
+
+
+

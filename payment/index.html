@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="">
+  <meta description="" content="">
+<title>萌猫生活</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width:1025px)" href="css/w1210.css" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width:1024px)" href="css/w1023.css" />
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/min.js"></script>
+<script>
+//商品的选项卡
+        window.onload = function ()
+        {
+          var oLi = document.getElementById("tab").getElementsByTagName("li");
+          var oUl = document.getElementById("content").getElementsByTagName("ul");
+          
+          for(var i = 0; i < oLi.length; i++)
+          {
+            oLi[i].index = i;
+            oLi[i].onmouseover = function ()
+            {
+              for(var n = 0; n < oLi.length; n++) oLi[n].className="";
+              this.className = "current";
+              for(var n = 0; n < oUl.length; n++) oUl[n].style.display = "none";
+              oUl[this.index].style.display = "block"
+            } 
+          }
+        }
+</script>
+</head>
+	<body>
+       <div class="header">
+        <div class="nav-header">
+            <div class="head_min">
+                <span class="hd_lf fl">
+                   您好，欢迎光临喀兔！&nbsp;<a href="">请登录</a>&nbsp;|&nbsp;<a href="">免费注册</a>
+                </span>
+                <span class="hd_lf fr">
+                   <img src="image/001.png" />&nbsp;
+                   <a href="">我的收藏</a>&nbsp;&nbsp;
+                   <img src="image/002.png" />&nbsp;
+                   <a href="">我的权益袋</a>&nbsp;<span class="red">(62)</span>&nbsp;&nbsp;&nbsp;
+                   <a href="">手机版</a>&nbsp;|&nbsp;
+                   <a href="">客户服务</a>
+                </span>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--头部登录按钮结束-->
+        <div class="head_center">
+            <div class="logo fl">
+                <img src="image/logon2.png" />
+            </div>
+            <div class="search fl">
+                <div class="search-form">
+        					<div id="search-bd" class="search-bd">
+        						<ul>
+        							<li class="selected">商品</li>
+        							<li>品牌</li>
+        						</ul>
+        					</div>
+        					<div id="search-hd" class="search-hd">
+        						<div class="search-bg"></div>
+        						<input type="text" id="s1" class="search-input">
+        						<input type="text" id="s2" class="search-input">
+        						<span class="s1 pholder">搜相关商品名称</span>
+        						<span class="s2 pholder">搜相关品牌名称</span>
+        						<button id="submit" class="btn-search" value="搜索">搜索</button>
+        					</div>
+        				</div>
+            </div>
+            <img src="image/004.png" aling="right" class="fl xian" />
+            <dl class="welcom fl">
+                 <dt>Hi 萌猫</dt>
+                 <dd>想你所想</dd>
+                 <dd>购你所购</dd> 
+            </dl>
+                 <div class="erweima fr">
+                     <img src="image/003.png">
+                 </div>
+            <div class="clear"></div>
+            <!--PC首页右侧登录star-->
+                    <div class="login">
+                      <div class="right_longing"></div>
+                          <div class="login_min" >
+                            <dl class="login_top">
+                               <dt>
+                                  <img src="image/003.png">
+                               </dt>
+                               <dd class="big_nanme">Hi您好</dd>
+                               <dd class="tlsy">剩余猫粮：0000</dd>
+                               <div class="clear"></div>
+                            </dl>
+
+                            <div class="but_con">
+                               <a href="" class="but_1 fl">登录</a>
+                               <a href="" class="mfzc fr">免 费 注 册</a>
+                               <div class="clear"></div>
+                            </div><!--登录按钮结束-->
+
+                            <div class="login_info">
+                               <dl class="info_min">
+                                <a href="">
+                                    <dt> 
+                                      0
+                                    </dt>
+                                    <dd>待收货</dd>
+                                </a>
+                               </dl>
+                               <dl class="info_min">
+                                <a href="">
+                                    <dt> 
+                                      0
+                                    </dt>
+                                    <dd>待发货</dd>
+                                </a>
+                               </dl>
+                               <dl class="info_min">
+                                <a href="">
+                                    <dt> 
+                                      0
+                                    </dt>
+                                    <dd>待置换</dd>
+                                </a>
+                               </dl>
+                               <dl class="info_min">
+                                <a href="">
+                                    <dt> 
+                                      0
+                                    </dt>
+                                    <dd>待评价</dd>
+                                </a>
+                               </dl>
+                               <dl class="info_min">
+                                <a href="">
+                                    <dt> 
+                                      0
+                                    </dt>
+                                    <dd>优惠券</dd>
+                                </a>
+                               </dl>
+                               <div class="clear"></div>
+                            </div>
+                            <!--登录信息结束-->
+                            <div class="login_propaganda">
+                                <ul class="tq_list">
+                                   <li class="log_hysj"><a href="">会员升级</a></li>
+                                   <li class="log_hysj2"><a href="">会员特权</a></li>
+                                   <li class="log_hysj3"><a href="">生日特权</a></li>
+                                   <li class="log_hysj4"><a href="">节日特权</a></li>
+                                   <div class="clear"></div>
+                                </ul>
+                            </div><!--宣传特权结束-->
+                                  <div class="see_more">
+                                     <a href="#">查看更多特权&nbsp;&gt</a>
+                                  </div>
+                          </div><!-- login_min end -->                    
+                    </div>
+
+                 <!--PC首页右侧登录end-->
+        </div> 
+        <!--头部中间结束-->
+        <!--导航Nav开始-->
+          <div class="header-wrap">
+            <div class="navwrap">
+              <div id="nav">
+                <div class="navbar clearfix">
+                  <a class="current" href="#">首页</a>
+                  <a href="#">会员中心</a>
+                  <a href="#">品牌中心</a>
+
+                </div>
+                <div class="pros subpage">
+                  <h2 style="background:#000">全部分类</h2>
+                  <ul class="prosul clearfix" id="proinfo"  style="display: block;">
+                    <li class="food">
+                      <a href="">服饰</a>
+                      <div class="prosmore hide">
+                        <a href="https://www.baidu.com/">1111111</a>
+                      </div>
+                    </li>
+                    <li class="enjoy">
+                      <a href="">名牌箱包</a>
+                      <div class="prosmore hide">
+                        2222222
+                      </div>
+                    </li>
+                    <li class="travel">
+                      <a href="">鞋履</a>
+                      <div class="prosmore hide">
+                        33333333
+                      </div>
+                    </li>
+                    <li class="life">
+                      <a href="">名品配饰</a>
+                      <div class="prosmore hide">
+                        4444444
+                      </div>
+                    </li>
+                    <li class="women">
+                     <a href="">珠宝配饰</a>
+                      <div class="prosmore hide">
+                        5555555
+                      </div>
+                    </li>
+                    <li class="goods bd-solid">
+                      <a href="">黄金配饰</a>
+                      <div class="prosmore hide">
+                        6666666
+                      </div>
+                    </li>
+                    <li class="hotareas nochild last">
+                           <h3>绝对奢侈品</h3>
+                           <p>Love is love</p>
+                           <p>Roccobarocco</p>
+                           <p>RB Roccobarocco</p> 
+                           <p>Compagnia italiana</p> 
+                           <p>Scervino Street</p> 
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--导航Nav结束-->
+         
+
+
+   </div>
+   <!--总的头部结束-->
+            
+             <!--banner PC整体开始-->
+                 <div class="banner_con">
+                    <div class="lunhuan">
+                      <div id="lunhuanback">
+                        <p class="bg_1" style='opacity: 1;filter:alpha(opacity=100);'>
+                              <img src="image/lunhuan.jpg">
+                        </p>
+                        <p class="bg_2">
+                              <img src="image/lunhuan1.jpg">  
+                        </p>
+                        <p class="bg_3">
+                              <img src="image/lunhuan2.jpg"> 
+                        </p>
+                        <p class="bg_4">
+                               <img src="image/lunhuan3.jpg">
+                        </p>
+                      </div>
+                      <div class="lunhuan_main">
+                          <!-- 轮换中间区域 -->
+                          <div class="lunhuancenter">
+                            
+                              <!-- 轮播的页码  开始 -->
+                              <ul id='lunbonum'>
+                                  <li class='lunboone'></li>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                              </ul>
+                              <!-- 轮播的页码  结束 -->
+                          </div>
+                          <!-- 轮换中间区域结束 -->
+                      </div>
+                  </div>
+                 </div>
+                 <!--banner pc整体开始-->
+             <!--PC选项卡star-->
+                <div class="center_banner">
+                       <div id="outer">
+                          <ul id="tab">
+                              <li class="current">奢侈品护理</li>
+                              <li>兔粮置换</li>
+                          </ul>
+                        <div class="center_conter">
+                          <div id="content">
+                              <ul style="display:block;">
+                                  <div class="xk_left fl">
+                                     <dl class="xk_min">
+                                        <dd class="xk_one">奢侈品皮具</dd>
+                                        <dd class="xk_two">基础清洗养护套餐</dd>
+                                        <dt><img src="image/icon4.png"></dt>
+                                     </dl>
+
+                                     <dl class="xk_min">
+                                        <dd class="xk_one">名品鞋</dd>
+                                        <dd class="xk_two">单鞋</dd>
+                                        <dt><img src="image/icon5.png"></dt>
+                                     </dl>
+
+                                     <dl class="xk_min">
+                                        <dd class="xk_one">腕表打磨翻新服务</dd>
+                                        <dd class="xk_two">钢款</dd>
+                                        <dt><img src="image/icon6.png"></dt>
+                                     </dl>
+
+                                  </div>
+                                  <div class="xk_right fr">
+                                    <p><img src="image/icon7.png" /></p>
+                                    <h3 class="xk_tit">完成养护，顾客取货</h3>
+                                    <p class="xk_con">
+                                      完成养护后，养护服务系统会自动发送物品养护完成的通知短信，顾客可以选择到就近的养护中心 提取自己的货品或者拨打养护中心服务电话选择快递送货上门（快递费用顾客自行支付）。
+                                    </p>
+                                  </div>
+                                  <div class="clear"></div>
+                              </ul>
+                              <!--第一个选项卡结束-->
+                              <ul>
+                                  <div class="xk_left fl">
+
+                                     <dl class="xk_min">
+                                        <dd class="xk_one">计量单位</dd>
+                                        <dd class="xk_two">兔粮是会员权益的计量单位</dd>
+                                        <dt><img src="image/icon17.jpg"></dt>
+                                     </dl>
+
+                                     <dl class="xk_min">
+                                        <dd class="xk_one">提升会员VIP等级</dd>
+                                        <dd class="xk_two">兔粮置换商品能提升会员等级</dd>
+                                        <dt><img src="image/icon18.jpg"></dt>
+                                     </dl>
+                                    <dl class="xk_min">
+                                        <dd class="xk_one">现金购买/积分兑换</dd>
+                                        <dd class="xk_two">会员可现金购买/积分兑换兔粮</dd>
+                                        <dt><img src="image/icon19.jpg"></dt>
+                                     </dl>
+
+
+                                  </div>
+                                  <div class="xk_right fr">
+                                    <p><img src="image/icon20.jpg" /></p>
+                                    <h3 class="xk_tit">积分活动细则</h3>
+                                    <p class="xk_con">
+                                       会员可以现金购买、积分兑换的方式购买会员权益服务、获取等值兔粮；兔粮是会员权益的计量单位，可置换喀兔网的商品与服务。兔粮置换商品能提升会员VIP等级，获得弄个更好的会员权益服务；注册成为喀兔网会员，并填写完善会员个人信息，登录网站首页点击进入“我的喀兔”，进入充值页面，选择兔粮充值方式，并填写相关信息完成充值。
+                                    </p>
+                                  </div>
+                                  <div class="clear"></div>
+                              </ul>
+                              <!--第二个产品结束-->
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+             <!--PC选项卡end-->
+             <!--商品整体开始-->
+             <div class="pc_contenter">
+                 <h3>
+                    <span>人气单品 POPULAR</span>
+                     <strong><a href="">More</a></strong>
+                 </h3>
+                
+                 <!--人气单品的商品star-->
+                     <div class="index_goods">
+                        <div class="lf_min">
+                          <a href="">
+                            <!--PC大图-->
+                            <img src="image/icon29.jpg" class="pc_icon"/>
+                            <!-- phone pad 小图 -->
+                            <img src="image/icon21.png" class="phone_icon"/>
+                          </a>
+                        </div>
+
+                        <div class="rt_min">
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon23.jpg"></dt>
+                                <dd class="goods_tit">Furla 柠檬黄色拉链手包钱包</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon24.jpg"></dt>
+                                <dd class="goods_tit">ALEXANDER MCQUEEN 黄铜镶水晶骷髅头银色双圈戒指</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon25.jpg"></dt>
+                                <dd class="goods_tit">ALEXANDER MCQUEEN 格纹皮质骷髅头吊牌带扣手环</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon26.jpg"></dt>
+                                <dd class="goods_tit">MICHAEL KORS  迈克.科尔斯女士粉红色小牛皮女士单肩/斜跨包</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon27.jpg"></dt>
+                                <dd class="goods_tit">ALEXANDER MCQUEEN 黄铜镶水晶骷髅头单圈银色戒指</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon28.jpg"></dt>
+                                <dd class="goods_tit">GUCCI 古驰短钱包帆布拼牛皮卡其色 2kgd8r</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon12.jpg"></dt>
+                                <dd class="goods_tit">MICHAEL KORS  迈克.科尔斯/粉红色/真皮斜挎包</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon14.jpg"></dt>
+                                <dd class="goods_tit">GUCCI 古驰短钱包帆布拼牛皮卡其色 2kgd8r</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list pad_more">
+                              <a href="https://www.baidu.com/">
+                                <img src="image/icon22.png">
+                                <p>查看更多</p>
+                              </a>
+                            </dl>
+                            <div class="clear" ></div>
+                        </div>
+                        <div class="clear"></div>
+                     </div>
+                 <!--人气单品的商品end-->
+                 <h3>
+                    <span>奢侈品 LUXURY</span>
+                     <strong><a href="">More</a></strong>
+                 </h3>
+                 <!--奢侈品品的商品star-->
+                     <div class="index_goods">
+                        <div class="lf_min">
+                          <a href="">
+                            <!--PC大图-->
+                            <img src="image/icon8.jpg" class="pc_icon"/>
+                            <!-- phone pad 小图 -->
+                            <img src="image/032.png" class="phone_icon"/>
+                          </a>
+                        </div>
+
+                        <div class="rt_min">
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon9.jpg"></dt>
+                                <dd class="goods_tit">Alexander McQueen 亚撒旦法撒旦法多少历山大</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon10.jpg"></dt>
+                                <dd class="goods_tit">Burberry博柏利男款深蓝色压纹牛皮斜跨单肩包</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon11.jpg"></dt>
+                                <dd class="goods_tit">VERSUS VERSACE范思哲女士牛皮金属logo手拿单肩包红色</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon12.jpg"></dt>
+                                <dd class="goods_tit">FENDI 芬迪女士雾蓝色短钱包牛皮雾蓝色</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon13.jpg"></dt>
+                                <dd class="goods_tit">ALEXANDER MCQUEEN 黄铜镶水晶骷髅头单圈银色戒指</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon14.jpg"></dt>
+                                <dd class="goods_tit">GUCCI 古驰短钱包帆布拼牛皮卡其色 2kgd8r</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon15.jpg"></dt>
+                                <dd class="goods_tit">MICHAEL KORS  迈克.科尔斯/粉红色/真皮斜挎包</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon16.jpg"></dt>
+                                <dd class="goods_tit">GUCCI 古驰短钱包帆布拼牛皮卡其色 2kgd8r</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list pad_more">
+                              <a href="https://www.baidu.com/">
+                                <img src="image/icon22.png">
+                                <p>查看更多</p>
+                              </a>
+                            </dl>
+                            <div class="clear" ></div>
+                        </div>
+                        <div class="clear"></div>
+                     </div>
+                 <!--奢侈品的商品end-->
+                 <h3>
+                    <span>黄金珠宝 Golad jewelry</span>
+                     <strong><a href="">More</a></strong>
+                 </h3>
+                 <!--黄金珠宝的商品star-->
+                     <div class="index_goods">
+                        <div class="lf_min">
+                          <a href="">
+                            <!--PC大图-->
+                            <img src="image/icon30.jpg" class="pc_icon"/>
+                            <!-- phone pad 小图 -->
+                            <img src="image/032.png" class="phone_icon"/>
+                          </a>
+                        </div>
+
+                        <div class="rt_min">
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon31.jpg"></dt>
+                                <dd class="goods_tit">周大生18K玫瑰金项链 -满天星</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon32.jpg"></dt>
+                                <dd class="goods_tit">周大生TUZKI兔斯基系列黄金吊坠-love锁</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon33.jpg"></dt>
+                                <dd class="goods_tit">周大生3D硬金钥匙套链心灵的窗口</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon34.jpg"></dt>
+                                <dd class="goods_tit">周大生3D硬足金吊坠-魔法权杖</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon35.jpg"></dt>
+                                <dd class="goods_tit">周大生18k玫瑰金甜美心形女戒</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon36.jpg"></dt>
+                                <dd class="goods_tit"><a href="/product-1677.html?module=homepapg&amp;source=floor" title="周大生3D硬金吊坠-奶瓶" target="_blank">周大生3D硬金吊坠-奶瓶</a></dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon37.jpg"></dt>
+                                <dd class="goods_tit">周大生3D硬金吊坠-Q萌小鹿</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list">
+                              <a href="https://www.baidu.com/">
+                                <dt><img src="image/icon38.png"></dt>
+                                <dd class="goods_tit">VE 时尚珠宝 3D硬金-四叶草</dd>
+                                <dd class="goods_tl">3303兔粮</dd>
+                              </a>
+                            </dl>
+                            <dl class="goods_list pad_more">
+                              <a href="https://www.baidu.com/">
+                                <img src="image/icon22.png">
+                                <p>查看更多</p>
+                              </a>
+                            </dl>
+                            <div class="clear" ></div>
+                        </div>
+                        <div class="clear"></div>
+                     </div>
+                 <!--黄金珠宝的商品end-->
+                  <!--品牌精选star-->
+                    <h3>
+                       <span>品牌精选 BRANG</span>
+                       <strong><a href="">More</a></strong>
+                    </h3>
+                    <div class="brand_contenter">
+                      <ul class="brand_list">
+                        <li class="spbq">
+                          <a href=""><img src="image/icon39.png"></a>
+                          <div class="biankuang biankuang_1"></div>
+                          <div class="biankuang biankuang_2"></div>
+                          <div class="biankuang biankuang_3"></div>
+                          <div class="biankuang biankuang_4"></div>
+                        </li>
+                       
+                        <li class="spbq">
+                          <a href=""><img src="image/icon40.png"></a>
+                          <div class="biankuang biankuang_1"></div>
+                          <div class="biankuang biankuang_2"></div>
+                          <div class="biankuang biankuang_3"></div>
+                          <div class="biankuang biankuang_4"></div>
+                        </li>
+                        <li class="spbq">
+                          <a href=""><img src="image/icon41.png"></a>
+                          <div class="biankuang biankuang_1"></div>
+                          <div class="biankuang biankuang_2"></div>
+                          <div class="biankuang biankuang_3"></div>
+                          <div class="biankuang biankuang_4"></div>
+                        </li>
+                        <li class="spbq">
+                          <a href=""><img src="image/icon42.png"></a>
+                          <div class="biankuang biankuang_1"></div>
+                          <div class="biankuang biankuang_2"></div>
+                          <div class="biankuang biankuang_3"></div>
+                          <div class="biankuang biankuang_4"></div>
+                        </li>
+                        <li class="spbq">
+                          <a href=""><img src="image/icon43.png"></a>
+                          <div class="biankuang biankuang_1"></div>
+                          <div class="biankuang biankuang_2"></div>
+                          <div class="biankuang biankuang_3"></div>
+                          <div class="biankuang biankuang_4"></div>
+                        </li>
+                        <li class="spbq">
+                          <a href=""><img src="image/icon44.png"></a>
+                          <div class="biankuang biankuang_1"></div>
+                          <div class="biankuang biankuang_2"></div>
+                          <div class="biankuang biankuang_3"></div>
+                          <div class="biankuang biankuang_4"></div>
+                        </li>
+                        <li class="spbq">
+                          <a href=""><img src="image/icon45.png"></a>
+                          <div class="biankuang biankuang_1"></div>
+                          <div class="biankuang biankuang_2"></div>
+                          <div class="biankuang biankuang_3"></div>
+                          <div class="biankuang biankuang_4"></div>
+                        </li>
+                        <li class="spbq">
+                          <a href=""><img src="image/icon46.png"></a>
+                          <div class="biankuang biankuang_1"></div>
+                          <div class="biankuang biankuang_2"></div>
+                          <div class="biankuang biankuang_3"></div>
+                          <div class="biankuang biankuang_4"></div>
+                        </li>
+                        <div class="clear"></div>
+                      </ul>
+                    </div>
+                  <!--品牌精选end-->
+                  <!--下方可能喜欢star-->
+                     <div class="lick_contenter">
+                      <div class="lf_lick fl">
+                        <h3>您可能会喜欢</h3>
+                        <div class="lick_min">
+                           <ul class="lick_con">
+                            <li><a href=""><img src="image/icon48.png"></a></li>
+                            <li><a href=""><img src="image/icon10.jpg"></a></li>
+                            <li><a href=""><img src="image/icon16.jpg"></a></li>
+                            <li><a href=""><img src="image/icon14.jpg"></a></li>
+                            <div class="clear"></div>
+                           </ul>
+                        </div>
+                      </div>
+                      <div class="rt_evaluat fr">
+                          <h3>意见反馈</h3>
+                          <div class="rt_evaluat_min">
+                            <p>您对本站的整体印象如何？</p>
+                            <div class="eva_cont">
+                                <input type="radio" id="fcmy" value="1">
+                                <label name="fcmy" class="checked" for="fcmy">非常满意</label>                            
+                                <input type="radio" id="my" value="2">
+                                <label name="my" for="my">满意</label>
+
+                                <input type="radio" id="ybb" value="3">
+                                <label name="ybb" for="ybb">一般般</label>
+
+                                <input type="radio" id="bmy" value="4">
+                                <label name="bmy" for="bmy">不满意</label>
+
+                                <input type="radio" id="fcbmy" value="5">
+                                <label name="fcbmy" for="fcbmy">非常不满意</label>
+                            </div>
+
+                            <p style="margin-top: 20px">您对本站的商品及服务感觉如何？</p>
+                            <div class="eva_conto">
+                                <input type="radio" id="fcmyo" value="1">
+                                <label name="fcmyo" class="checked" for="fcmyo">非常满意</label>                            
+                                <input type="radio" id="myo" value="2">
+                                <label name="myo" for="myo">满意</label>
+
+                                <input type="radio" id="ybbo" value="3">
+                                <label name="ybbo" for="ybbo">一般般</label>
+
+                                <input type="radio" id="bmyo" value="4">
+                                <label name="bmyo" for="bmyo">不满意</label>
+                                
+                                <input type="radio" id="fcbmyo" value="5">
+                                <label name="fcbmyo" for="fcbmyo">非常不满意</label>
+                            </div>
+                          </div>
+                          <!--建议开始-->
+                             <textarea class="suggest" placeholder="请输入其他建议"></textarea>
+                             <a href="javascript:void(0)" class="sugg_bt">确认提交</a>
+                          <!--建议结束-->
+                      </div><!--意见反馈结束-->
+                      <div class="clear"></div>
+                      <!--下方7天退换货star-->
+                      <div class="biaozhi"> 
+                        <img src="image/icon49.png">
+                      </div>
+                      <!--下方7天退换货end-->
+                      </div>
+                  <!--下方可能喜欢end-->
+             </div>
+             <!--商品整体结束-->
+                      <!--bottom star-->
+                         <div class="bottom_conter">
+                          <!--热线开始-->
+                            <div class="bottom_xzcon">
+                                <div class="bottom_min">
+                                    <div class="lf_bottom fl">
+                                      <p><img src="image/logon2.png"></p>
+                                      <p class="phone"><i>全国服务热线：400-888-8888</i></p>
+                                    </div>
+                                    <div class="rf_bottom fr">
+                                      <ul class="rigt_min">
+                                        <h3>新 手 上 路</h3>
+                                        <li><a href="">用户必读</a></li>
+                                        <li><a href="">订单的几种状态</a></li>
+                                        <li><a href="">积分奖励计划</a></li>
+                                        <li><a href="">商品退货保障</a></li>
+                                      </ul>
+
+                                      <ul class="rigt_min">
+                                        <h3>置 换 指 南</h3>
+                                        <li><a href="">会员等级折扣</a></li>
+                                        <li><a href="">非会员置换通道</a></li>
+                                        <li><a href="">体贴的权益服务</a></li>
+                                        <li><a href="">网站免责声明</a></li>
+                                      </ul>
+
+                                      <ul class="rigt_min">
+                                        <h3>配置/配送方式</h3>
+                                        <li><a href="">配置方式</a></li>
+                                        <li><a href="">配送方式</a></li>
+                                        <li><a href="">订单何时出库？</a></li>
+                                        <li><a href="">网上置换小贴士</a></li>
+                                      </ul>
+
+                                      <ul class="rigt_min">
+                                        <h3>购物条款</h3>
+                                        <li><a href="">网站使用条款</a></li>
+                                        <li><a href="">隐私保护政策</a></li>
+                                        <li><a href="">会员注册协议</a></li>
+                                      </ul>
+
+                                      <ul class="rigt_min">
+                                        <h3>公 司 简 介</h3>
+                                        <li><a href="">关于我们</a></li>
+                                        <li><a href="">联系我们</a></li>
+                                        <li><a href="">招聘信息</a></li>
+                                        <li><a href="">业务合作</a></li>
+                                      </ul>
+
+
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <!--热线结束-->
+                            <!--版权开始-->
+                               <div class="copy">
+                                <p>&copy;2016-2016 All rights reserved.</p>                              
+                               </div>
+                            <!--版权结束-->
+
+                         </div>
+                      <!--bottom end-->
+             <script type="text/javascript">
+                $(function(){
+                   $('.goods_list').hover(
+                       function(){
+                        $(this).addClass("hov_bg");
+
+                       },function(){
+                        $(this).removeClass("hov_bg");
+                       }
+                    )
+                   $('.lf_min').hover(
+                       function(){
+                        $(this).addClass("hov_bg");
+                       },function(){
+                        $(this).removeClass("hov_bg");
+                       }
+                    )
+                })
+             </script>
+             <script type="text/javascript">
+
+</script>
+
+	</body>
+</html>
