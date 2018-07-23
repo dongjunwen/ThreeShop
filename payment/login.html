@@ -157,7 +157,8 @@
         $.each($(".login-box input"),function (key,val) {
             if ($(val).val()==""||$(val).val()==undefined){
                 $(".erro").show().html($(val).attr("placeholder"));
-                return false;pass=false;
+                pass=false;
+                return false;
             }
             //效验手机，用户名 TODO
         });
