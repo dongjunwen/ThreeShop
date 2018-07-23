@@ -134,17 +134,49 @@
               <div class="login-box no-longlogin module-static">
                 <h3>密码登录</h3>
                 <div class="logincnt">
-                  <input type="text"  class="logintext" name="" placeholder="请输入用户名">
+                  <input type="text" class="logintext" name="loginNo" placeholder="请输入用户名">
                 </div>
                 <div class="logincnt">
-                  <input type="password"  class="logintext" name="" placeholder="请输入用密码">
+                  <input type="password"  class="logintext" name="loginPass" placeholder="请输入用密码">
                 </div>
-                <button type="submit" class="loginBtn" id="" data-ing="正在登录...">登 录</button>
+                <button type="submit" class="loginBtn" id="loginBtn" data-ing="正在登录...">登 录</button>
               </div>
-              <div class="erro">密码错误</div>
+              <div class="erro" hidden>密码错误</div>
             </div>
           </div>
         </div>
         <!--登录结束-->
   </body>
+
+<script>
+    $(".login-box input").focus(function () {
+        $(".erro").hide();
+    });
+    var pass=true;
+    $("#loginBtn").click(function () {
+        $.each($(".login-box input"),function (key,val) {
+            if ($(val).val()==""||$(val).val()==undefined){
+                $(".erro").show().html($(val).attr("placeholder"));
+                return false;pass=false;
+            }
+            //效验手机，用户名 TODO
+        });
+        if(!pass){return}
+        var param={loginNo:$("input[name='loginNo']").val(),loginPass:$("input[name='loginPass']").val()};
+        WebOrder.getAjaxData({
+            url:"/api/user/login",
+            type:'post',
+            param:JSON.stringify(param),
+            dateType:"JSON",
+            callback:function (date,parm) {
+                if (date.retCode=="200"){
+                    window.location.href="/payment/index.html";
+                }else {
+                   $(".erro").show().html(date.retMsg);
+                }
+            }
+        });
+    });
+</script>
+
 </html>

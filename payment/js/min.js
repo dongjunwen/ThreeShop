@@ -169,6 +169,55 @@ $('.eva_conto label').click(function(){
    //获取选中的值
   var val1 = $('input[type="radio"]:checked').attr('value')
   //alert(val1)
-})
+});
 
-})
+});
+    var  WebOrder={
+        //baseUrl:"http://47.91.209.22",
+        baseUrl:"http://localhost:9007",
+        getAjaxData: function (m_param) {
+            /*
+             * param{
+             *   url :网址
+             * , type：get/post/jsonp
+             * , param:参数
+             * }
+             * */
+            var self = this;
+            var dateType = m_param.dateType || "jsonp",fnc= m_param.callback,param=m_param.param,async=m_param.async|| false,type=m_param.type;
+            if (type=='get'){
+                $.ajax({
+                    url:WebOrder.baseUrl+m_param.url,
+                    type:type,
+                    data:param,
+                    dateType:dateType,
+                    jsonp:"callback",
+                    async:async,
+                    success:function (date) {
+                        console.log(JSON.stringify(date));
+                        fnc(date,m_param.param);
+                    },
+                    error:function () {
+                    }
+                });
+            }
+            if (type=='post'){
+                $.ajax({
+                    url:WebOrder.baseUrl+m_param.url,
+                    type:type,
+                    data:param,
+                    dateType:dateType,
+                    async:async,
+                    contentType: "application/json; charset=utf-8",
+                    success:function (date) {
+                        fnc(date,m_param.param);
+                    },
+                    error:function () {
+
+                    }
+                });
+            }
+
+        }
+
+    }
